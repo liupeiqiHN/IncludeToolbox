@@ -319,7 +319,7 @@ namespace IncludeToolbox.IncludeWhatYouUse
                 /// https://github.com/Wumpf/IncludeToolbox/issues/36                
                 // Include-paths and Preprocessor.
                 var includes = string.Join(" ", VSUtils.GetProjectIncludeDirectories(project, false).Select(x => "-I \"" + x.Replace("\\", "\\\\") + "\""));
-                var defines = string.Join(" ", preprocessorDefintions.Split(';').Select(x => "-D" + x));
+                var defines = preprocessorDefintions.Length == 0 ? "" : string.Join(" ", preprocessorDefintions.Split(';').Select(x => "-D" + x));
                 var filename = "\"" + fullFileName.Replace("\\", "\\\\") + "\"";
                 var supportFilePath = Path.GetTempFileName();
                 File.WriteAllText(supportFilePath, includes + " " + defines + " " + filename);

@@ -103,6 +103,7 @@ namespace IncludeToolbox
             {
                 try
                 {
+                    pathStrings[i] = pathStrings[i].Trim();
                     if (!Path.IsPathRooted(pathStrings[i]))
                     {
                         pathStrings[i] = Path.Combine(projectPath, pathStrings[i]);
