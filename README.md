@@ -1,3 +1,5 @@
+**Project inactive, looking for maintainer!**
+
 # IncludeToolbox
 Visual Studio extension for managing C/C++ includes:
 * **Format & Sort:** Format include commands to cleanup large lists of includes according to your preferences
