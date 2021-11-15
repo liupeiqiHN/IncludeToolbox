@@ -46,7 +46,7 @@ namespace IncludeToolbox
             return fileConfig;
         }
 
-        private static VCTool GetToolFromActiveConfiguration<VCTool>(Project project) where VCTool: class
+        private static VCTool GetToolFromActiveConfiguration<VCTool>(Project project) where VCTool : class
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
@@ -56,7 +56,7 @@ namespace IncludeToolbox
 
             VCConfiguration activeConfiguration = vcProject.ActiveConfiguration;
             VCTool compilerTool = null;
-            foreach (var tool in activeConfiguration.Tools)
+            foreach (var tool in activeConfiguration.Tools as System.Collections.IEnumerable[])
             {
                 compilerTool = tool as VCTool;
                 if (compilerTool != null)
@@ -78,7 +78,7 @@ namespace IncludeToolbox
             VCConfiguration activeConfiguration = vcProject.ActiveConfiguration;
             var tools = activeConfiguration.Tools;
             VCLinkerTool linkerTool = null;
-            foreach (var tool in activeConfiguration.Tools)
+            foreach (var tool in activeConfiguration.Tools as System.Collections.IEnumerable[])
             {
                 linkerTool = tool as VCLinkerTool;
                 if (linkerTool != null)

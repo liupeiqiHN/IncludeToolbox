@@ -10,7 +10,9 @@
         <Tags>Include, Include What You Use, IWYU, Include Formatting, Include Sorting, #include, Include Removal</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
+        <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
@@ -19,8 +21,8 @@
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
     </Assets>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,)" DisplayName="Visual Studio core editor" />
-        <Prerequisite Id="Microsoft.VisualStudio.Component.VC.CoreIde" Version="[15.0.25904.2,)" DisplayName="Visual Studio C++ core features" />
-        <Prerequisite Id="Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core" Version="[15.0.25904.2,)" DisplayName="Visual Studio C++ core features" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,18.0.00001.1)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.VC.CoreIde" Version="[15.0.25904.2,18.0.00001.1)" DisplayName="Visual Studio C++ core features" />
+        <Prerequisite Id="Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core" Version="[15.0.25904.2,18.0.00001.1)" DisplayName="Visual Studio C++ core features" />
     </Prerequisites>
 </PackageManifest>
