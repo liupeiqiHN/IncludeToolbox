@@ -56,7 +56,7 @@ namespace IncludeToolbox
 
             VCConfiguration activeConfiguration = vcProject.ActiveConfiguration;
             VCTool compilerTool = null;
-            foreach (var tool in activeConfiguration.Tools as System.Collections.IEnumerable[])
+            foreach (var tool in activeConfiguration.Tools as IVCCollection)
             {
                 compilerTool = tool as VCTool;
                 if (compilerTool != null)
@@ -78,7 +78,7 @@ namespace IncludeToolbox
             VCConfiguration activeConfiguration = vcProject.ActiveConfiguration;
             var tools = activeConfiguration.Tools;
             VCLinkerTool linkerTool = null;
-            foreach (var tool in activeConfiguration.Tools as System.Collections.IEnumerable[])
+            foreach (var tool in activeConfiguration.Tools as IVCCollection)
             {
                 linkerTool = tool as VCLinkerTool;
                 if (linkerTool != null)
