@@ -66,6 +66,8 @@ namespace IncludeToolbox
                 return "1915";
             else if (dte.Version.StartsWith("16."))
                 return "1920";
+            else if (dte.Version.StartsWith("17."))
+                return "1931";
             else
                 throw new NotImplementedException("Unknown MSVC version!");
         }
